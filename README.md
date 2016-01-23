@@ -32,8 +32,8 @@ var dest = 'some-dest'
 gentlyCopy(fileList, dest)
 ```
 
+Console output:
 ```sh
-//=> 
 = Begin copying files
  - Copying file or directory: some-file
  - Copying file or directory: some-dir
