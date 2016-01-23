@@ -1,6 +1,6 @@
 # gently-copy [![Build Status](https://travis-ci.org/dmitriz/gently-copy.svg?branch=master)](https://travis-ci.org/dmitriz/gently-copy)
 
-> Gently copy files
+> Colorfully and informatively copy files without overwriting.
 
 
 ## Why?
@@ -9,7 +9,8 @@
 
 
 ## Features
-- Safely copy files and directories without overwriting.
+- Safely copy files and directories without overwriting. 
+- Skip overwriting existing files, inform instead.
 - Create new directories if needed.
 - Clearly and colorfully inform about all actions peformed.
 
@@ -32,7 +33,7 @@ var dest = 'some-dest'
 gentlyCopy(fileList, dest)
 ```
 
-Console output:
+Console output with colors, thanks to the wonderful [`chalk`](https://github.com/chalk/chalk):
 ```sh
 = Begin copying files
  - Copying file or directory: some-file
