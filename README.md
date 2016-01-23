@@ -51,7 +51,7 @@ Console output with colors, thanks to the wonderful [`chalk`](https://github.com
 
 Type: `string` or (`array` of `strings`)
 
-Single or list of file and directory names.
+Single or list of file and directory name(s).
 
 #### destination
 
