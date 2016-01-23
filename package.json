@@ -23,7 +23,13 @@
   "keywords": [
     "copy",
     "file",
-    "directory"
+    "file-system",
+    "overwrite",
+    "directory",
+    "safe",
+    "graceful",
+    "gentle",
+    "inform"
   ],
   "dependencies": {
     "chalk": "^1.1.1",
