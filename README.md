@@ -49,12 +49,13 @@ Console output with colors, thanks to the wonderful [`chalk`](https://github.com
 
 #### source
 
-Type: array of strings
+Type: `string` or `array` of `strings`
+Single or list of file and directory names.
 
 #### destination
 
-Type: string
-
+Type: `string`
+Destination directory name.
 
 ## License
 
