@@ -2,7 +2,7 @@
 
 var gentlyCopy = require('../')
 
-var fileList = ['file1', 'demo-dir']
-var dest = 'dest'
+var fileList = ['some-file', 'some-dir']
+var dest = 'some-dest'
 
 gentlyCopy(fileList, dest)
