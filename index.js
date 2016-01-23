@@ -7,13 +7,13 @@ var shells = require('shelljs')
 module.exports = function (filesList, dest) {
   console.log(chalk.blue('\n= Begin copying files'))
 
-	filesList.forEach(function (file) {
-	  console.log(chalk.green(' - Copying file or directory:'), chalk.red(file))
+  filesList.forEach(function (file) {
+    console.log(chalk.green(' - Copying file or directory:'), chalk.red(file))
 
 		// https://github.com/shelljs/shelljs#javascript
-	  shells.cp('-R', file, dest)
+    shells.cp('-R', file, dest)
 		//	cpy(file, userPath);
-	})
+  })
 
   console.log(chalk.blue('\n= End copying files'))
 }
