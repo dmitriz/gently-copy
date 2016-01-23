@@ -16,7 +16,7 @@
 
 ## Install
 
-```
+```sh
 $ npm install --save gently-copy
 ```
 
@@ -24,17 +24,16 @@ $ npm install --save gently-copy
 ## Usage
 
 ```js
-var gentlyCopy = require('gently-copy');
+var gentlyCopy = require('gently-copy')
 
 var fileList = ['some-file', 'some-dir']
 var dest = 'some-dest'
 
 gentlyCopy(fileList, dest)
-
-//=> 
 ```
 
 ```sh
+//=> 
 = Begin copying files
  - Copying file or directory: some-file
  - Copying file or directory: some-dir
@@ -45,7 +44,7 @@ gentlyCopy(fileList, dest)
 
 ## API
 
-### gentlyCopy(source, destination)
+### gentlyCopy (source, destination)
 
 #### source
 
