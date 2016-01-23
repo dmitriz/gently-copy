@@ -1,10 +1,19 @@
-'use strict';
-module.exports = function (str, opts) {
-	if (typeof str !== 'string') {
-		throw new TypeError('Expected a string');
-	}
+// index.js
+'use strict'
 
-	opts = opts || {};
+var chalk = require('chalk')
+var shells = require('shelljs')
 
-	return str + ' & ' + (opts.postfix || 'rainbows');
-};
+module.exports = function (filesList, dest) {
+  console.log(chalk.blue('\n= Begin copying files'))
+
+	filesList.forEach(function (file) {
+	  console.log(chalk.green(' - Copying file or directory:'), chalk.red(file))
+
+		// https://github.com/shelljs/shelljs#javascript
+	  shells.cp('-R', file, dest)
+		//	cpy(file, userPath);
+	})
+
+  console.log(chalk.blue('\n= End copying files'))
+}

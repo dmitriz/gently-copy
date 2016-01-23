@@ -1,7 +1,7 @@
 {
   "name": "gently-copy",
   "version": "0.0.0",
-  "description": "My beautiful module",
+  "description": "Copy files without overwriting",
   "license": "MIT",
   "repository": "dmitriz/gently-copy",
   "author": {
@@ -19,9 +19,14 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "copy",
+    "file",
+    "directory"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "shelljs": "^0.5.3"
+  },
   "devDependencies": {
     "ava": "^0.5.0",
     "xo": "^0.11.2"
