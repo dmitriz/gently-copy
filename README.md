@@ -1,6 +1,17 @@
 # gently-copy [![Build Status](https://travis-ci.org/dmitriz/gently-copy.svg?branch=master)](https://travis-ci.org/dmitriz/gently-copy)
 
-> My beautiful module
+> Gently copy files
+
+
+## Why?
+- Copying files is sensitive operation with possible side-effects.
+- Standard utilities do not sufficiently inform the user about what is going on.
+
+
+## Features
+- Safely copy files and directories without overwriting.
+- Create new directories if needed.
+- Clearly and colorfully inform about all actions peformed.
 
 
 ## Install
@@ -13,31 +24,36 @@ $ npm install --save gently-copy
 ## Usage
 
 ```js
-const gentlyCopy = require('gently-copy');
+var gentlyCopy = require('gently-copy');
 
-gentlyCopy('unicorns');
-//=> 'unicorns & rainbows'
+var fileList = ['some-file', 'some-dir']
+var dest = 'some-dest'
+
+gentlyCopy(fileList, dest)
+
+//=> 
 ```
 
+```sh
+= Begin copying files
+ - Copying file or directory: some-file
+ - Copying file or directory: some-dir
+
+= End copying files
+
+```
 
 ## API
 
-### gentlyCopy(input, [options])
+### gentlyCopy(source, destination)
 
-#### input
+#### source
 
-Type: `string`
+Type: array of strings
 
-Lorem ipsum.
+#### destination
 
-#### options
-
-##### foo
-
-Type: `boolean`  
-Default: `false`
-
-Lorem ipsum.
+Type: string
 
 
 ## License
