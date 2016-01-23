@@ -15,7 +15,7 @@
   "scripts": {
     "test": "ava",
     "pub": "npm version patch && npm publish && git push",
-    "sync": "git ac && git pull --rebase && git push",
+    "sync": "git ac && git pull --rebase && git push"
   },
   "files": [
     "index.js"
