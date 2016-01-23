@@ -13,7 +13,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "pub": "npm version patch && npm publish && git push",
+    "sync": "git ac && git pull --rebase && git push",
   },
   "files": [
     "index.js"
