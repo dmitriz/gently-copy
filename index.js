@@ -19,5 +19,5 @@ module.exports = function (filesList, dest) {
     shells.cp('-R', file, dest)
   })
 
-  console.log(chalk.blue('\n= End copying files'))
+  console.log(chalk.blue('= End copying files\n'))
 }
