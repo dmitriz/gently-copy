@@ -7,7 +7,7 @@ var shells = require('shelljs')
 module.exports = function (filesList, dest) {
   console.log(chalk.blue('\n= Begin copying files'))
 
-  // if single file or directory, create an array
+	// if single file or directory, create an array
   if (!filesList.forEach) {
     filesList = [filesList]
   }
@@ -17,7 +17,6 @@ module.exports = function (filesList, dest) {
 
 		// https://github.com/shelljs/shelljs#javascript
     shells.cp('-R', file, dest)
-		//	cpy(file, userPath);
   })
 
   console.log(chalk.blue('\n= End copying files'))
