@@ -1,5 +1,7 @@
 # gently-copy [![Build Status](https://travis-ci.org/dmitriz/gently-copy.svg?branch=master)](https://travis-ci.org/dmitriz/gently-copy) [![Circle CI](https://circleci.com/gh/dmitriz/gently-copy.svg?style=svg)](https://circleci.com/gh/dmitriz/gently-copy)
 
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 > Colorfully and informatively copy files without overwriting.
 
 
