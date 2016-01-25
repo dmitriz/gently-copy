@@ -1,4 +1,4 @@
-# gently-copy [![Build Status](https://travis-ci.org/dmitriz/gently-copy.svg?branch=master)](https://travis-ci.org/dmitriz/gently-copy)
+# gently-copy [![Build Status](https://travis-ci.org/dmitriz/gently-copy.svg?branch=master)](https://travis-ci.org/dmitriz/gently-copy) [![Circle CI](https://circleci.com/gh/dmitriz/gently-copy.svg?style=svg)](https://circleci.com/gh/dmitriz/gently-copy)
 
 > Colorfully and informatively copy files without overwriting.
 
