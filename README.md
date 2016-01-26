@@ -40,7 +40,6 @@ Console output with colors, thanks to the wonderful [`chalk`](https://github.com
 = Begin copying files
  - Copying file or directory: some-file
  - Copying file or directory: some-dir
-
 = End copying files
 
 ```
