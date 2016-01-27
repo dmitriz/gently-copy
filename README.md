@@ -44,9 +44,12 @@ Console output with colors, thanks to the wonderful [`chalk`](https://github.com
 
 ```
 
+
 ## API
 
+
 ### gentlyCopy (source, destination)
+
 
 #### source
 
@@ -54,11 +57,13 @@ Type: `string` or (`array` of `strings`)
 
 Single or list of file and directory name(s).
 
+
 #### destination
 
 Type: `string`
 
 Destination directory name.
+
 
 ## License
 
