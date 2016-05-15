@@ -2,7 +2,8 @@
 'use strict'
 
 var chalk = require('chalk')
-var shells = require('shelljs')
+var cpy = require('cpy')
+// var shells = require('shelljs')
 
 module.exports = function (filesList, dest) {
   console.log(chalk.blue('\n= Begin copying files'))
@@ -16,7 +17,8 @@ module.exports = function (filesList, dest) {
     console.log(chalk.green(' - Copying file or directory:'), chalk.red(file))
 
 		// https://github.com/shelljs/shelljs#javascript
-    shells.cp('-R', file, dest)
+    // shells.cp('-R', file, dest)
+    cpy(file, dest, {overwrite: false})
   })
 
   console.log(chalk.blue('= End copying files\n'))
