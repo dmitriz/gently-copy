@@ -5,8 +5,8 @@ Safely, colorfully and informatively copy files without overwriting
 [![Build Status](https://travis-ci.org/dmitriz/gently-copy.svg?branch=master)](https://travis-ci.org/dmitriz/gently-copy) 
 [![bitHound Code](https://www.bithound.io/github/dmitriz/gently-copy/badges/code.svg)](https://www.bithound.io/github/dmitriz/gently-copy) 
 [![Circle CI](https://circleci.com/gh/dmitriz/gently-copy.svg?style=svg)](https://circleci.com/gh/dmitriz/gently-copy)
-[![Code Climate](https://codeclimate.com/github/dmitriz/min-karma/badges/gpa.svg)](https://codeclimate.com/github/dmitriz/gently-copy) 
-[![Dependency Status](https://david-dm.org/dmitriz/min-karma.svg)](https://david-dm.org/dmitriz/gently-copy) 
+[![Code Climate](https://codeclimate.com/github/dmitriz/gently-copy/badges/gpa.svg)](https://codeclimate.com/github/dmitriz/gently-copy) 
+[![Dependency Status](https://david-dm.org/dmitriz/gently-copy.svg)](https://david-dm.org/dmitriz/gently-copy) 
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
 [![MIT License](https://img.shields.io/npm/l/gently-copy.svg?style=flat-square)](http://opensource.org/licenses/MIT) 
