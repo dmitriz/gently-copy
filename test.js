@@ -45,12 +45,29 @@ test('copy one file to existing directory', t => {
   t.is(read('LICENSE'), read('tmp/newdir/LICENSE'))
 })
 
-test('file structure is preserved when copy one directory to new name', t => {
+test('copy one directory preserving file structure', t => {
   mkdir('tmp/dir_old')
   write('tmp/dir_old/file', 'mytext')
   fn('tmp/dir_old', 'tmp/dir_new')
   t.is(read('tmp/dir_new/file'), 'mytext')
 })
+
+
+/*
+ *  === Multiple file or directory copy ===
+*/
+
+test('copy multiple files and directories', t => {
+  mkdir('tmp/dir') 
+  mkdir('tmp/dir/subdir')
+  write('tmp/dir/subdir/file', 'mytext')
+
+  fn(['LICENSE', 'package.json', 'dir/subdir'], 'tmp')
+  t.is(read('LICENSE'), read('tmp/LICENSE'))
+  t.is(read('package.json'), read('tmp/package.json'))
+  t.is(read('tmp/dir/subdir/file'), 'mytext')
+})
+
 
 /*
  * 	=== Non-existant directory copy ===
@@ -60,7 +77,7 @@ test('copy one file into non-existing directory', t => {
 })
 
 /*
- * 	=== Overwriting ===
+ * 	=== (Non) overwriting ===
 */
 test('do not overwrite existing file', t => {
   write('tmp/newfile', 'mytext')
@@ -81,13 +98,3 @@ test('do not overwrite existing directory', t => {
   fn('LICENSE', 'tmp/dir_old')
   t.is(read('tmp/dir_old/file'), 'mytext')
 })
-
-
-/*
- * 	=== Multiple file or directory copy ===
-*/
-
-
-// test('copy multiple files', t => {
-//   fn(['LICENSE', 'package.json', 'demo'], 'demo/dest1')
-// })
