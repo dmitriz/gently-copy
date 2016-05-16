@@ -6,10 +6,6 @@ import test from 'ava'
 
 import fn from './'
 
-function bad () {
-  throw Error('Bad function')
-}
-
 function read (file) {
   return fs.readFileSync(file, 'utf8')
 }
@@ -52,13 +48,12 @@ test('copy one directory preserving file structure', t => {
   t.is(read('tmp/dir_new/file'), 'mytext')
 })
 
-
 /*
  *  === Multiple file or directory copy ===
 */
 
 test('copy multiple files and directories', t => {
-  mkdir('tmp/dir') 
+  mkdir('tmp/dir')
   mkdir('tmp/dir/subdir')
   write('tmp/dir/subdir/file', 'mytext')
 
@@ -68,12 +63,11 @@ test('copy multiple files and directories', t => {
   t.is(read('tmp/dir/subdir/file'), 'mytext')
 })
 
-
 /*
  * 	=== Non-existant directory copy ===
 */
 test('copy one file into non-existing directory', t => {
-  fn('LICENSE', 'tmp/dir_nonexist/newfile')	
+  fn('LICENSE', 'tmp/dir_nonexist/newfile')
 })
 
 /*

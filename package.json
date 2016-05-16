@@ -39,5 +39,8 @@
   "devDependencies": {
     "ava": "github:sindresorhus/ava",
     "rimraf": "^2.5.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/dmitriz/min-karma/issues"
+  },
 }
