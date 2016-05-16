@@ -13,6 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "start": "cd demo/ && node demo.js && cd ../",
     "test": "ava",
     "pub": "npm version patch && npm publish && git push",
     "sync": "git ac && git pull --rebase && git push"
