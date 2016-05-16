@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "cd demo/ && node demo.js && cd ../",
-    "test": "ava",
+    "test": "nyc ava",
     "pub": "npm version patch && npm publish && git push",
     "sync": "git ac && git pull --rebase && git push"
   },
@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "ava": "github:sindresorhus/ava",
+    "nyc": "^6.4.4",
     "rimraf": "^2.5.2"
   },
   "bugs": {
