@@ -41,6 +41,6 @@
     "rimraf": "^2.5.2"
   },
   "bugs": {
-    "url": "https://github.com/dmitriz/min-karma/issues"
-  },
+    "url": "https://github.com/dmitriz/gently-copy/issues"
+  }
 }
