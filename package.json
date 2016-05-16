@@ -37,7 +37,7 @@
     "shelljs": "^0.7.0"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
+    "ava": "github:sindresorhus/ava",
     "rimraf": "^2.5.2"
   }
 }

@@ -3,7 +3,12 @@ import fs from 'fs'
 // import path from 'path'
 import rimraf from 'rimraf'
 import test from 'ava'
+
 import fn from './'
+
+function bad () {
+  throw Error('Bad function')
+}
 
 function read (file) {
   return fs.readFileSync(file, 'utf8')
@@ -26,6 +31,9 @@ test.afterEach(t => {
   rimraf.sync('tmp')
 })
 
+/*
+ * 	=== Single file or directory copy ===
+*/
 test('copy one file to new name', t => {
   fn('LICENSE', 'tmp/LICENSE')
   t.is(read('LICENSE'), read('tmp/LICENSE'))
@@ -44,28 +52,40 @@ test('file structure is preserved when copy one directory to new name', t => {
   t.is(read('tmp/dir_new/file'), 'mytext')
 })
 
-test('do not overwrite', () => {
-  test('do not overwrite existing file', t => {
-    write('tmp/newfile', 'mytext')
-    fn('LICENSE', 'tmp/newfile')
-    t.is(read('tmp/newfile'), 'mytext')
-  })
-
-  test('do not overwrite existing directory', t => {
-    mkdir('tmp/dir_old')
-    write('tmp/dir_old/file', 'mytext')
-    fn('LICENSE', 'tmp/dir_old')
-    t.is(read('tmp/dir_old/file'), 'mytext')
-  })
-
-  test('do not overwrite existing directory', t => {
-    mkdir('tmp/dir_old')
-    write('tmp/dir_old/file', 'mytext')
-    fn('LICENSE', 'tmp/dir_old')
-    t.is(read('tmp/dir_old/file'), 'mytext')
-  })
+/*
+ * 	=== Non-existant directory copy ===
+*/
+test('copy one file into non-existing directory', t => {
+  fn('LICENSE', 'tmp/dir_nonexist/newfile')	
 })
 
+/*
+ * 	=== Overwriting ===
+*/
+test('do not overwrite existing file', t => {
+  write('tmp/newfile', 'mytext')
+  fn('LICENSE', 'tmp/newfile')
+  t.is(read('tmp/newfile'), 'mytext')
+})
+
+test('do not overwrite existing directory', t => {
+  mkdir('tmp/dir_old')
+  write('tmp/dir_old/file', 'mytext')
+  fn('LICENSE', 'tmp/dir_old')
+  t.is(read('tmp/dir_old/file'), 'mytext')
+})
+
+test('do not overwrite existing directory', t => {
+  mkdir('tmp/dir_old')
+  write('tmp/dir_old/file', 'mytext')
+  fn('LICENSE', 'tmp/dir_old')
+  t.is(read('tmp/dir_old/file'), 'mytext')
+})
+
+
+/*
+ * 	=== Multiple file or directory copy ===
+*/
 
 
 // test('copy multiple files', t => {
