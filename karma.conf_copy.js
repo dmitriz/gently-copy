@@ -10,17 +10,10 @@ module.exports = function (config) {
     // files / glob patterns to load
     // Tip. Keep your tests next to testees for better cohesion
     files: [
+
+      // load all JavaScript files inside `demo` folder
       'test.js'
     ],
-
-    // Use Webpack to pre-process files requiring external modules:
-    // https://github.com/webpack/karma-webpack
-    // https://karma-runner.github.io/0.13/config/preprocessors.html
-    preprocessors: {
-
-      // list files as entry points for webpack
-      '*test.js': ['webpack']
-    },
 
     // Browsers available include:
     // - Chrome and ChromeCanary (install `karma-chrome-launcher`)
