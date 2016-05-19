@@ -19,8 +19,8 @@ Safely, colorfully and informatively copy files without overwriting
 
 
 ## Features
-- Safely copy files and directories without overwriting (but can be configured to overwrite with option `{overwrite: true}`)
-- Skip overwriting existing files, inform instead.
+- Safely copy files and directories without overwriting.
+- Skip overwriting existing files, inform instead (or configure to overwrite instead with `option = {overwrite: true}`.
 - Create new directories if needed.
 - Clearly and colorfully inform about all actions peformed.
 

@@ -5,7 +5,13 @@ var fs = require('fs')
 var chalk = require('chalk')
 var shells = require('shelljs')
 
-module.exports = function (filesList, dest, opt) {
+gentlyCopy.read = function (file) {
+  return fs.readFileSync(file, 'utf8')
+}
+
+module.exports = gentlyCopy
+
+function gentlyCopy (filesList, dest, opt) {
   if (typeof opt !== 'object') {
     opt = {}
   }
@@ -18,15 +24,14 @@ module.exports = function (filesList, dest, opt) {
   }
 
   filesList.forEach(function (file) {
-
     // https://github.com/shelljs/shelljs#cpoptions-source_array-dest
     if (opt.overwrite) {
+      console.log(chalk.green(' - Overwriting file or directory:'), chalk.red(file))
       shells.cp('-Rf', file, dest)
     } else {
+      console.log(chalk.green(' - Copying file or directory:'), chalk.red(file))
       shells.cp('-Rn', file, dest)
     }
-
-    console.log(chalk.green(' - Copied file or directory:'), chalk.red(file))
   })
 
   console.log(chalk.blue('= End copying files\n'))
