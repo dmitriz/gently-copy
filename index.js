@@ -6,7 +6,9 @@ var chalk = require('chalk')
 var shells = require('shelljs')
 
 module.exports = function (filesList, dest, opt) {
-  opt = opt || {}
+  if (typeof opt !== 'object') {
+    opt = {}
+  }
 
   console.log(chalk.blue('\n= Begin copying files'))
 

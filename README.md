@@ -19,7 +19,7 @@ Safely, colorfully and informatively copy files without overwriting
 
 
 ## Features
-- Safely copy files and directories without overwriting. 
+- Safely copy files and directories without overwriting (but can be configured to overwrite with option `{overwrite: true}`)
 - Skip overwriting existing files, inform instead.
 - Create new directories if needed.
 - Clearly and colorfully inform about all actions peformed.
@@ -40,7 +40,8 @@ var gentlyCopy = require('gently-copy')
 var fileList = ['some-file', 'some-dir']
 var dest = 'some-dest'
 
-gentlyCopy(fileList, dest)
+gentlyCopy(fileList, dest) // no overwriting (default)
+gentlyCopy(fileList, dest, {overwrite: true}) // force overwriting
 ```
 
 Console output with colors, thanks to the wonderful [`chalk`](https://github.com/chalk/chalk):
@@ -56,10 +57,10 @@ Console output with colors, thanks to the wonderful [`chalk`](https://github.com
 ## API
 
 
-### gentlyCopy (source, destination)
+### gentlyCopy (source, destination, options)
 
 
-#### source
+#### source 
 
 Type: `string` or (`array` of `strings`)
 
@@ -71,6 +72,13 @@ Single or list of file and directory name(s).
 Type: `string`
 
 Destination directory name.
+
+
+#### options (optional)
+
+Type: `object`
+
+To overwrite existing files, pass `option = {overwrite: true}`
 
 
 ## License
