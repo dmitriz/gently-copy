@@ -28,8 +28,8 @@ test.afterEach(t => {
 })
 
 /*
- * 	=== Single file or directory copy ===
-*/
+ *  === Single file or directory copy ===
+ */
 test('copy one file to new name', t => {
   fn('LICENSE', 'tmp/LICENSE')
   t.is(read('LICENSE'), read('tmp/LICENSE'))
@@ -50,7 +50,7 @@ test('copy one directory preserving file structure', t => {
 
 /*
  *  === Multiple file or directory copy ===
-*/
+ */
 
 test('copy multiple files and directories', t => {
   mkdir('tmp/dir')
@@ -64,15 +64,15 @@ test('copy multiple files and directories', t => {
 })
 
 /*
- * 	=== Non-existant directory copy ===
-*/
+ *  === Non-existant directory copy ===
+ */
 test('copy one file into non-existing directory', t => {
   fn('LICENSE', 'tmp/dir_nonexist/newfile')
 })
 
 /*
- * 	=== (Non) overwriting ===
-*/
+ *  === (Non) overwriting ===
+ */
 test('do not overwrite existing file', t => {
   write('tmp/newfile', 'mytext')
   fn('LICENSE', 'tmp/newfile')
@@ -86,9 +86,11 @@ test('do not overwrite existing directory', t => {
   t.is(read('tmp/dir_old/file'), 'mytext')
 })
 
-test('do not overwrite existing directory', t => {
-  mkdir('tmp/dir_old')
-  write('tmp/dir_old/file', 'mytext')
-  fn('LICENSE', 'tmp/dir_old')
-  t.is(read('tmp/dir_old/file'), 'mytext')
+/*
+ *  === Overwrite option
+ */
+test('overwrite existing file if option.overwrite === true', t => {
+  write('tmp/newfile', 'mytext')
+  fn('LICENSE', 'tmp/newfile', {overwrite: true})
+  t.is(read('tmp/newfile'), read('LICENSE'))
 })
