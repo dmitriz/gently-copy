@@ -10,7 +10,7 @@
     "url": "github.com/dmitriz"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">= 4"
   },
   "scripts": {
     "start": "cd demo/ && node demo.js && cd ../",
