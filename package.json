@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "cd demo/ && node demo.js && cd ../",
-    "test": "nyc ava",
+    "test": "nyc ava --serial",
     "pub": "npm version patch && npm publish && git push",
     "sync": "git ac && git pull --rebase && git push"
   },
@@ -33,15 +33,14 @@
     "inform"
   ],
   "dependencies": {
-    "chalk": "^1.1.2",
-    "shelljs": "^0.7.0"
+    "chalk": "^2.4.1",
+    "fs-extra": "^7.0.1"
   },
   "devDependencies": {
-    "ava": "github:sindresorhus/ava",
-    "codecov": "^1.0.1",
-    "nyc": "^6.4.4",
-    "rimraf": "^2.5.2",
-    "tap": "^5.7.1"
+    "ava": "^0.25.0",
+    "codecov": "^3.1.0",
+    "nyc": "^13.1.0",
+    "tap": "^12.1.0"
   },
   "bugs": {
     "url": "https://github.com/dmitriz/gently-copy/issues"
