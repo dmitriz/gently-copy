@@ -1,6 +1,6 @@
 {
   "name": "gently-copy",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "description": "Copy files without overwriting",
   "license": "MIT",
   "repository": "dmitriz/gently-copy",
