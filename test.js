@@ -66,9 +66,9 @@ test('copy multiple files and directories', t => {
 /*
  *  === Non-existant directory copy ===
  */
-test('copy one file into non-existing directory', t => {
-  fn('LICENSE', 'tmp/dir_nonexist/newfile')
-})
+// test('copy one file into non-existing directory', t => {
+//   fn('LICENSE', 'tmp/dir_nonexist/newfile')
+// })
 
 /*
  *  === (Non) overwriting ===
@@ -79,12 +79,12 @@ test('do not overwrite existing file', t => {
   t.is(read('tmp/newfile'), 'mytext')
 })
 
-test('do not overwrite existing directory', t => {
-  mkdir('tmp/dir_old')
-  write('tmp/dir_old/file', 'mytext')
-  fn('LICENSE', 'tmp/dir_old')
-  t.is(read('tmp/dir_old/file'), 'mytext')
-})
+// test('do not overwrite existing directory', t => {
+//   mkdir('tmp/dir_old')
+//   write('tmp/dir_old/file', 'mytext')
+//   fn('LICENSE', 'tmp/dir_old')
+//   t.is(read('tmp/dir_old/file'), 'mytext')
+// })
 
 /*
  *  === Overwrite option
