@@ -1,6 +1,6 @@
 {
   "name": "gently-copy",
-  "version": "2.3.1",
+  "version": "3.2.0",
   "description": "Copy files without overwriting",
   "license": "MIT",
   "repository": "dmitriz/gently-copy",
@@ -14,6 +14,9 @@
   },
   "scripts": {
     "start": "cd demo/ && node demo.js && cd ../",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --all; git push origin --tags",
     "test": "nyc ava",
     "pub": "npm version patch && npm publish && git push",
     "sync": "git ac && git pull --rebase && git push"
@@ -33,8 +36,8 @@
     "inform"
   ],
   "dependencies": {
-    "chalk": "^1.1.2",
-    "shelljs": "^0.7.0"
+    "chalk": "^2.4.2",
+    "shelljs": "^0.8.3"
   },
   "devDependencies": {
     "ava": "github:sindresorhus/ava",
