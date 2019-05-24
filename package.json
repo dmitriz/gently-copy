@@ -37,14 +37,14 @@
   ],
   "dependencies": {
     "chalk": "^2.4.2",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "fs-extra": "^7.0.1"
   },
   "devDependencies": {
-    "ava": "github:sindresorhus/ava",
-    "codecov": "^1.0.1",
-    "nyc": "^6.4.4",
-    "rimraf": "^2.5.2",
-    "tap": "^5.7.1"
+    "ava": "^0.25.0",
+    "codecov": "^3.1.0",
+    "nyc": "^13.1.0",
+    "tap": "^12.1.0"
   },
   "bugs": {
     "url": "https://github.com/dmitriz/gently-copy/issues"

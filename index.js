@@ -1,38 +1,43 @@
 // index.js
 'use strict'
-
-var fs = require('fs')
-var chalk = require('chalk')
-var shells = require('shelljs')
+const fs = require('fs-extra')
+const path = require('path');
+const chalk = require('chalk')
 
 gentlyCopy.read = function (file) {
-  return fs.readFileSync(file, 'utf8')
+	return fs.readFileSync(file, 'utf8')
 }
 
 module.exports = gentlyCopy
 
-function gentlyCopy (filesList, dest, opt) {
-  if (typeof opt !== 'object') {
-    opt = {}
-  }
+async function gentlyCopy(filesList, dest, opt) {
 
-  console.log(chalk.blue('\n= Begin copying files'))
+	if (typeof opt !== 'object') {
+		opt = { overwrite: false }
+	}
+	console.log(chalk.blue('\n= Begin copying files'))
 
-  // if single file or directory, create an array
-  if (!filesList.forEach) {
-    filesList = [filesList]
-  }
+	// if single file or directory, create an array
+	if (!filesList.forEach) {
+		filesList = [filesList]
+	}
 
-  filesList.forEach(function (file) {
-    // https://github.com/shelljs/shelljs#cpoptions-source_array-dest
-    if (opt.overwrite) {
-      console.log(chalk.green(' - Overwriting file or directory:'), chalk.red(file))
-      shells.cp('-Rf', file, dest)
-    } else {
-      console.log(chalk.green(' - Copying file or directory:'), chalk.red(file))
-      shells.cp('-Rn', file, dest)
-    }
-  })
+	for (const file in filesList) {
+		let destinationAddress = dest
+		let destination = await fs.exists(destinationAddress)
+		let destinationIsFile = destination ? fs.lstatSync(destinationAddress).isFile() : false
+		let sourceIsFile = fs.lstatSync(filesList[file]).isFile()
 
-  console.log(chalk.blue('= End copying files\n'))
+		// calculate destination...
+		if (sourceIsFile && !destinationIsFile) {
+			destinationAddress = destinationAddress + path.sep + filesList[file]
+		}
+
+		if (opt.overwrite && opt.overwrite === true) {
+			console.log(chalk.green(' - Overwriting file or directory:'), chalk.red(filesList[file]))
+		}
+		console.log(chalk.green(' - Copying file or directory:'), chalk.red(filesList[file]))
+		fs.copySync(filesList[file], destinationAddress, opt)
+	}
+	console.log(chalk.blue('= End copying files\n'))
 }
