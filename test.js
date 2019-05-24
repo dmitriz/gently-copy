@@ -86,10 +86,12 @@ test('copy multiple files and directories', async t => {
 /*
  *  === Non-existant directory copy ===
  */
+
 test('copy one file into non-existing directory', async t => {
 	await fn('LICENSE', 'tmp/dir_nonexist/newfile')
 	t.is(await fs.exists('tmp/dir_nonexist/newfile/LICENSE'), true)
 })
+
 
 /*
  *  === (Non) overwriting ===
@@ -106,6 +108,7 @@ test('do not overwrite existing directory', async t => {
 	await fn('LICENSE', 'tmp/dir_old2')
 	t.is(await read('tmp/dir_old2/file'), 'mytext')
 })
+
 /*
  *  === Overwrite option
  */
