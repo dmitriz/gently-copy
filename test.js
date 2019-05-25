@@ -33,8 +33,8 @@ function write(file, data) {
 	return fs.appendFileSync(file, data, 'utf8')
 }
 /** */
-function mkdir(dir) {
-	return fs.mkdirSync(dir)
+function mkdir(dir, options = { recursive: false }) {
+	return fs.mkdirSync(dir,options)
 }
 
 test.beforeEach(t => {
@@ -43,26 +43,25 @@ test.beforeEach(t => {
 })
 
 test.afterEach(t => {
-	fs.emptyDirSync('tmp')
+	//fs.emptyDirSync('tmp')
 })
 
 /*
  *  === Single file or directory copy ===
  */
-test('copy one file to new name', async t => {
+test.serial('copy one file to new name', async t => {
 	fn('LICENSE', 'tmp')
 	t.is(await read('LICENSE'), await read('tmp/LICENSE'))
-
 })
 
-test('copy one file to existing directory', async t => {
+test.serial('copy one file to existing directory', async t => {
 	mkdir('tmp/newdir')
 	fn('LICENSE', 'tmp/newdir')
 	t.is(await read('LICENSE'), await read('tmp/newdir/LICENSE'))
 })
 
-test('copy one directory preserving file structure', async t => {
-	mkdir('tmp/dir_old')
+test.serial('copy one directory preserving file structure', async t => {
+	mkdir('tmp/dir_old', { recursive: true } )
 	write('tmp/dir_old/file', 'mytext')
 	await fn('tmp/dir_old', 'tmp/dir_new')
 	t.is(await read('tmp/dir_new/file'), 'mytext')
@@ -72,11 +71,10 @@ test('copy one directory preserving file structure', async t => {
  *  === Multiple file or directory copy ===
  */
 
-test('copy multiple files and directories', async t => {
+test.serial('copy multiple files and directories', async t => {
 	mkdir('tmp/dir')
 	mkdir('tmp/dir/subdir')
 	write('tmp/dir/subdir/file', 'mytext')
-
 	fn(['LICENSE', 'package.json', 'tmp/dir/subdir'], 'tmp')
 	t.is(await read('LICENSE'), await read('tmp/LICENSE'), 'LICENSE File incorrect')
 	t.is(await read('package.json'), await read('tmp/package.json'), 'tmp/package.json File incorrect')
@@ -87,7 +85,7 @@ test('copy multiple files and directories', async t => {
  *  === Non-existant directory copy ===
  */
 
-test('copy one file into non-existing directory', async t => {
+test.serial('copy one file into non-existing directory', async t => {
 	await fn('LICENSE', 'tmp/dir_nonexist/newfile')
 	t.is(await fs.exists('tmp/dir_nonexist/newfile/LICENSE'), true)
 })
@@ -96,13 +94,13 @@ test('copy one file into non-existing directory', async t => {
 /*
  *  === (Non) overwriting ===
  */
-test('do not overwrite existing file', async t => {
+test.serial('do not overwrite existing file', async t => {
 	write('tmp/newfile', 'mytext')
 	await fn('LICENSE', 'tmp/newfile')
 	t.is(await read('tmp/newfile'), 'mytext')
 })
 
-test('do not overwrite existing directory', async t => {
+test.serial('do not overwrite existing directory', async t => {
 	mkdir('tmp/dir_old2')
 	write('tmp/dir_old2/file', 'mytext')
 	await fn('LICENSE', 'tmp/dir_old2')
@@ -112,10 +110,19 @@ test('do not overwrite existing directory', async t => {
 /*
  *  === Overwrite option
  */
-test('overwrite existing file if option.overwrite === true', async t => {
+test.serial('overwrite existing file if option.overwrite === true', async t => {
 	write('tmp/newfile', 'mytext')
 	await fn('LICENSE', 'tmp/newfile', {
 		overwrite: true
 	})
 	t.is(await read('tmp/newfile'), await read('LICENSE'))
+})
+
+test.serial('test the UTF8 Read function', async t =>{
+	let FileContent  = fn.read('demo/Sample UTF-8 File.txt')
+	let lines = FileContent.split('\n')
+
+	t.is(lines[8], 'Sanskrit: ﻿काचं शक्नोम्यत्तुम् । नोपहिनस्ति माम् ॥')
+	t.is(lines[9], 'Sanskrit (standard transcription): kācaṃ śaknomyattum; nopahinasti mām.')
+	t.is(lines[10], 'Classical Greek: ὕαλον ϕαγεῖν δύναμαι· τοῦτο οὔ με βλάπτει.')
 })
