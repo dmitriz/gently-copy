@@ -18,6 +18,7 @@
     "postversion": "npm publish",
     "postpublish": "git push origin --all; git push origin --tags",
     "test": "nyc ava",
+    "coverage": "node_modules/.bin/nyc --reporter=html --report-dir coverage ava",
     "pub": "npm version patch && npm publish && git push",
     "sync": "git ac && git pull --rebase && git push"
   },
