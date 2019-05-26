@@ -10,7 +10,7 @@ gentlyCopy.read = function (file) {
 
 module.exports = gentlyCopy
 
-async function gentlyCopy(filesList, dest, opt) {
+function gentlyCopy(filesList, dest, opt) {
 
 	if (typeof opt !== 'object') {
 		opt = { overwrite: false }
@@ -24,20 +24,20 @@ async function gentlyCopy(filesList, dest, opt) {
 
 	for (const file in filesList) {
 		let destinationAddress = dest
-		let destination = await fs.exists(destinationAddress)
-		let destinationIsFile = destination ? fs.lstatSync(destinationAddress).isFile() : false
-		let sourceIsFile = fs.lstatSync(filesList[file]).isFile()
+		fs.exists(destinationAddress, (destination) => {
+			let destinationIsFile = destination ? fs.lstatSync(destinationAddress).isFile() : false
+			let sourceIsFile = fs.lstatSync(filesList[file]).isFile()
+			// calculate destination...
+			if (sourceIsFile && !destinationIsFile) {
+				destinationAddress = destinationAddress + path.sep + filesList[file]
+			}
+			if (opt.overwrite && opt.overwrite === true) {
+				console.log(chalk.green(' - Overwriting file or directory:'), chalk.red(filesList[file]))
+			}
+			console.log(chalk.green(' - Copying file or directory:'), chalk.red(filesList[file]))
+			fs.copySync(filesList[file], destinationAddress, opt)
+		})
 
-		// calculate destination...
-		if (sourceIsFile && !destinationIsFile) {
-			destinationAddress = destinationAddress + path.sep + filesList[file]
-		}
-
-		if (opt.overwrite && opt.overwrite === true) {
-			console.log(chalk.green(' - Overwriting file or directory:'), chalk.red(filesList[file]))
-		}
-		console.log(chalk.green(' - Copying file or directory:'), chalk.red(filesList[file]))
-		fs.copySync(filesList[file], destinationAddress, opt)
 	}
 	console.log(chalk.blue('= End copying files\n'))
 }
