@@ -42,7 +42,7 @@
   "devDependencies": {
     "ava": "github:sindresorhus/ava",
     "codecov": "^1.0.1",
-    "nyc": "^6.4.4",
+    "nyc": "^14.1.1",
     "rimraf": "^2.5.2",
     "tap": "^5.7.1"
   },
