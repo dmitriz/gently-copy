@@ -551,7 +551,8 @@ atob@^2.1.1:
 
 "ava@github:sindresorhus/ava":
   version "2.0.0-beta.2"
-  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/f26634b1a82f1edc92d75935c833c6a8cad7cb93"
+  uid "98034fbb661bcc6cb882e1ae007a7877a803b3a4"
+  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/98034fbb661bcc6cb882e1ae007a7877a803b3a4"
   dependencies:
     "@ava/babel-preset-stage-4" "^3.0.0"
     "@ava/babel-preset-transform-test-files" "^5.0.0"
