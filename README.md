@@ -9,7 +9,7 @@ Safely, colorfully and informatively copy files without overwriting
 [![MIT License](https://img.shields.io/npm/l/gently-copy.svg?style=flat-square)](http://opensource.org/licenses/MIT) 
 [![npm downloads](https://img.shields.io/npm/dm/gently-copy.svg?style=flat-square)](https://www.npmjs.com/package/gently-copy)
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard) [![Greenkeeper badge](https://badges.greenkeeper.io/dmitriz/gently-copy.svg)](https://greenkeeper.io/)
 
 
 ## Why?
