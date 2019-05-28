@@ -36,15 +36,15 @@
     "inform"
   ],
   "dependencies": {
-    "chalk": "^2.4.2",
-    "shelljs": "^0.8.3"
+    "chalk": "2.4.2",
+    "shelljs": "0.8.3"
   },
   "devDependencies": {
     "ava": "github:sindresorhus/ava",
-    "codecov": "^3.5.0",
-    "nyc": "^6.4.4",
-    "rimraf": "^2.5.2",
-    "tap": "^5.7.1"
+    "codecov": "3.5.0",
+    "nyc": "6.6.1",
+    "rimraf": "2.6.3",
+    "tap": "5.8.0"
   },
   "bugs": {
     "url": "https://github.com/dmitriz/gently-copy/issues"
