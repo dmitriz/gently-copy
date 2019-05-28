@@ -21,12 +21,12 @@ function gentlyCopy(filesList, dest, opt) {
 	if (!filesList.forEach) {
 		filesList = [filesList]
 	}
+	let destinationAddress = dest
+	let destination = fs.existsSync(destinationAddress)
+	let destinationIsFile = destination ? fs.lstatSync(destinationAddress).isFile() : false
 
 	filesList.forEach(function (file) {
-		let destinationAddress = dest
 		let calculatedDestinationAddress = destinationAddress
-		let destination = fs.existsSync(destinationAddress)
-		let destinationIsFile = destination ? fs.lstatSync(destinationAddress).isFile() : false
 		let sourceIsFile = fs.lstatSync(file).isFile()
 
 		// calculate destination...
@@ -36,8 +36,9 @@ function gentlyCopy(filesList, dest, opt) {
 
 		if (opt.overwrite && opt.overwrite === true) {
 			console.log(chalk.green(' - Overwriting file or directory:'), chalk.red(file))
+		} else {
+			console.log(chalk.green(' - Copying file or directory:'), chalk.red(file))
 		}
-		console.log(chalk.green(' - Copying file or directory:'), chalk.red(file))
 		fs.copySync(file, calculatedDestinationAddress, opt)
 	  })
 
