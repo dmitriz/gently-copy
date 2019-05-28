@@ -1,6 +1,5 @@
 // test.js
 const fs = require('fs-extra')
-const path = require('path');
 import test from 'ava'
 import fn from './'
 
@@ -62,7 +61,7 @@ test.serial('copy one file to existing directory', t => {
 
 test.serial('copy one directory preserving file structure', t => {
 	debugger
-	mkdir('tmp/dir_old', { recursive: true } )
+	mkdir('tmp/dir_old')
 	write('tmp/dir_old/file', 'mytext')
 	fn('tmp/dir_old', 'tmp/dir_new')
 	t.is(read('tmp/dir_new/file'), 'mytext')
@@ -73,7 +72,7 @@ test.serial('copy one directory preserving file structure', t => {
  */
 
 test.serial('copy multiple files and directories', t => {
-	mkdir('tmp/dir/subdir', { recursive: true })
+	mkdir('tmp/dir/subdir')
 	write('tmp/dir/subdir/file', 'mytext')
 	fn(['LICENSE', 'package.json', 'tmp/dir/subdir'], 'tmp')
 
