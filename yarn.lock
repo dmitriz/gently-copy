@@ -1077,6 +1077,22 @@ chokidar@^3.0.0:
   optionalDependencies:
     fsevents "^2.0.6"
 
+chokidar@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.0.1.tgz#98fe9aa476c55d9aea7841d6325ffdb30e95b40c"
+  integrity sha512-2ww34sJWehnbpV0Q4k4V5Hh7juo7po6z7LUWkcIQnSGN1lHOL8GGtLtfwabKvLFQw/hbSUQ0u6V7OgGYgBzlkQ==
+  dependencies:
+    anymatch "^3.0.1"
+    async-each "^1.0.3"
+    braces "^3.0.2"
+    glob-parent "^5.0.0"
+    is-binary-path "^2.1.0"
+    is-glob "^4.0.1"
+    normalize-path "^3.0.0"
+    readdirp "^3.0.2"
+  optionalDependencies:
+    fsevents "^2.0.6"
+
 chunkd@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/chunkd/-/chunkd-1.0.0.tgz#4ead4a3704bcce510c4bb4d4a8be30c557836dd1"
@@ -1536,11 +1552,6 @@ dir-glob@^2.2.2:
   dependencies:
     path-type "^3.0.0"
 
-domain-browser@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/domain-browser/-/domain-browser-1.2.0.tgz#3d31f50191a6749dd1375a7f522e823d42e54eda"
-  integrity sha512-jnjyiM6eRyZl2H+W8Q/zLMA481hzi0eszAaBUzIVnmYVDBbnLxVNnfu1HgEBvCbL+71FrxMl3E6lpKH7Ge3OXA==
-
 dot-prop@^4.1.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-4.2.0.tgz#1f19e0c2e1aa0e32797c49799f2837ac6af69c57"
@@ -1843,17 +1854,17 @@ findit@^2.0.0:
   resolved "https://registry.yarnpkg.com/findit/-/findit-2.0.0.tgz#6509f0126af4c178551cfa99394e032e13a4d56e"
   integrity sha1-ZQnwEmr0wXhVHPqZOU4DLhOk1W4=
 
-flow-parser@^0.99.0:
-  version "0.99.0"
-  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.99.0.tgz#1fd3d1751b897a74c1f92c758688eb7f200237f0"
-  integrity sha512-6opkcL97qs5MhXqP9X/jym0lia6jsqyHpA+Z+6GlJv3bPOfmR45WACEwubJCXv0rMS1ryGF+E5ONzRpxzSoGZQ==
+flow-parser@^0.100.0:
+  version "0.100.0"
+  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.100.0.tgz#203eba9389fe96c21557e4c7d1ee69d863f6a7fe"
+  integrity sha512-4dpz6vfe0rCizZ8czLxrUhAascJspkKDUqINLiKEKCgua91A8hf4f22augPosu1mq9d1hquI+siM8VfDTw+8CA==
 
-flow-remove-types@^2.99.0:
-  version "2.99.0"
-  resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-2.99.0.tgz#117725cb4b30a0bb9a421e84f8a3c4bc994c9bc6"
-  integrity sha512-xPkxMExWtX/qJ9HnWOTHHN5Aniv7tYPAzjPl70/sh6BPdD0TzufyDBzjp4gy+tKHyE/aWX8qHbnpsU1yb0iLDg==
+flow-remove-types@^2.100.0:
+  version "2.100.0"
+  resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-2.100.0.tgz#2f07ac1babad70e74a023327429ec3decc2096f7"
+  integrity sha512-v7QQss5b/AfVJzeHUsgON+QlEAn9A2+EjJxlFKLRclyMjG2MBV5e4jIHlAtNZ74XLsV3FZ8QxZZi87KIr6oWoA==
   dependencies:
-    flow-parser "^0.99.0"
+    flow-parser "^0.100.0"
     pirates "^3.0.2"
     vlq "^0.2.1"
 
@@ -3764,6 +3775,13 @@ readdirp@^3.0.1:
   dependencies:
     picomatch "^2.0.4"
 
+readdirp@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/readdirp/-/readdirp-3.0.2.tgz#cba63348e9e42fc1bd334b1d2ef895b6a043cbd6"
+  integrity sha512-LbyJYv48eywrhOlScq16H/VkCiGKGPC2TpOdZCJ7QXnYEjn3NN/Oblh8QEU3vqfSRBB7OGvh5x45NKiVeNujIQ==
+  dependencies:
+    picomatch "^2.0.4"
+
 rechoir@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
@@ -4427,23 +4445,22 @@ tap-parser@^9.3.2:
   dependencies:
     yaml "^1.5.0"
 
-tap@14.2.0:
-  version "14.2.0"
-  resolved "https://registry.yarnpkg.com/tap/-/tap-14.2.0.tgz#bab8d496595c64d29c4a73d27e0ab10d3cf9699d"
-  integrity sha512-uZN2HdkjMFxxLJqIwRO/I0Izw4nCIMQnEBRyVhpQAyo+XyclximeLleK1QHeMuKLMamJGhLDZ+IxJeZxwnl8Og==
+tap@14.2.2:
+  version "14.2.2"
+  resolved "https://registry.yarnpkg.com/tap/-/tap-14.2.2.tgz#84e7b9a9f839e907fb2ab4c88b6c421346e9dee3"
+  integrity sha512-eZo7NmEmmvgU+BRa9fC1Puj+5+Yd7AOeFSFOw9xZiehzKHCF/JvhkVn8NCB5N5P4sywTD7NnYqgYrG/+Ny8T+g==
   dependencies:
     async-hook-domain "^1.1.0"
     bind-obj-methods "^2.0.0"
     browser-process-hrtime "^1.0.0"
     capture-stack-trace "^1.0.0"
-    chokidar "^3.0.0"
+    chokidar "^3.0.1"
     color-support "^1.1.0"
     coveralls "^3.0.3"
     diff "^4.0.1"
-    domain-browser "^1.2.0"
     esm "^3.2.25"
     findit "^2.0.0"
-    flow-remove-types "^2.99.0"
+    flow-remove-types "^2.100.0"
     foreground-child "^1.3.3"
     fs-exists-cached "^1.0.0"
     function-loop "^1.0.2"
@@ -4468,8 +4485,8 @@ tap@14.2.0:
     tcompare "^2.3.0"
     treport "^0.4.0"
     trivial-deferred "^1.0.1"
-    ts-node "^8.1.0"
-    typescript "^3.4.5"
+    ts-node "^8.2.0"
+    typescript "^3.5.1"
     which "^1.3.1"
     write-file-atomic "^3.0.0"
     yaml "^1.6.0"
@@ -4601,7 +4618,7 @@ trivial-deferred@^1.0.1:
   resolved "https://registry.yarnpkg.com/trivial-deferred/-/trivial-deferred-1.0.1.tgz#376d4d29d951d6368a6f7a0ae85c2f4d5e0658f3"
   integrity sha1-N21NKdlR1jaKb3oK6FwvTV4GWPM=
 
-ts-node@^8.1.0:
+ts-node@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.2.0.tgz#4a89754b00560bb24cd54526e1685fa38c45f240"
   integrity sha512-m8XQwUurkbYqXrKqr3WHCW310utRNvV5OnRVeISeea7LoCWVcdfeB/Ntl8JYWFh+WRoUAdBgESrzKochQt7sMw==
@@ -4636,10 +4653,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^3.4.5:
-  version "3.4.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.4.5.tgz#2d2618d10bb566572b8d7aad5180d84257d70a99"
-  integrity sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
+typescript@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.1.tgz#ba72a6a600b2158139c5dd8850f700e231464202"
+  integrity sha512-64HkdiRv1yYZsSe4xC1WVgamNigVYjlssIoaH2HcZF0+ijsk5YK2g0G34w9wJkze8+5ow4STd22AynfO6ZYYLw==
 
 uglify-js@^3.1.4:
   version "3.5.15"
