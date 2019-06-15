@@ -2254,7 +2254,7 @@ ini@^1.3.4, ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
-ink@^2.1.1:
+ink@*, ink@^2.1.1:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/ink/-/ink-2.2.0.tgz#8231cbaf03799634cb333ec4e461f50e25e93fc0"
   integrity sha512-BQl7jpmLxPqFGjdQdgXQS0+mAyn1BHkEW1YXur3dahNNwLB6MWsfAZ1GWVdj+Mbpmj+u33KaFOosw3067t3d9g==
@@ -4397,10 +4397,10 @@ tap-parser@^9.3.2:
   dependencies:
     yaml "^1.5.0"
 
-tap@14.2.2:
-  version "14.2.2"
-  resolved "https://registry.yarnpkg.com/tap/-/tap-14.2.2.tgz#84e7b9a9f839e907fb2ab4c88b6c421346e9dee3"
-  integrity sha512-eZo7NmEmmvgU+BRa9fC1Puj+5+Yd7AOeFSFOw9xZiehzKHCF/JvhkVn8NCB5N5P4sywTD7NnYqgYrG/+Ny8T+g==
+tap@14.2.3:
+  version "14.2.3"
+  resolved "https://registry.yarnpkg.com/tap/-/tap-14.2.3.tgz#ad5c53d242365f14dd95b16b7fe23a211694985f"
+  integrity sha512-XQFFqrhJIbHCWTDd8qGbzr6IlRVqDpEkjmvrPClO0My+IcEisODAhXQH6vJJPj0vMVPYMKgKo9E1bTdHEeS+GQ==
   dependencies:
     async-hook-domain "^1.1.0"
     bind-obj-methods "^2.0.0"
@@ -4418,6 +4418,7 @@ tap@14.2.2:
     function-loop "^1.0.2"
     glob "^7.1.4"
     import-jsx "^2.0.0"
+    ink "*"
     isexe "^2.0.0"
     istanbul-lib-processinfo "^1.0.0"
     jackspeak "^1.4.0"
@@ -4427,6 +4428,7 @@ tap@14.2.2:
     opener "^1.5.1"
     own-or "^1.0.0"
     own-or-env "^1.0.1"
+    react "^16.8.6"
     rimraf "^2.6.3"
     signal-exit "^3.0.0"
     source-map-support "^0.5.12"
