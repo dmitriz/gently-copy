@@ -44,7 +44,7 @@
     "codecov": "3.5.0",
     "nyc": "14.1.1",
     "rimraf": "2.6.3",
-    "tap": "14.2.3"
+    "tap": "14.4.0"
   },
   "bugs": {
     "url": "https://github.com/dmitriz/gently-copy/issues"
