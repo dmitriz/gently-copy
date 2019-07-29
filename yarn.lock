@@ -3942,10 +3942,10 @@ tap-parser@^9.3.2:
   dependencies:
     yaml "^1.5.0"
 
-tap@14.4.3:
-  version "14.4.3"
-  resolved "https://registry.yarnpkg.com/tap/-/tap-14.4.3.tgz#97506f8ff14e42ac4b72b4940b8f5b3608803059"
-  integrity sha512-luji9MrP9xwB+XzPeEQJJZFCRFwB6dIekMP+xYp77JfN7pkfKE/w7Tpu+hw0YMjdyOgSbcFlKOdfaIyzVhmsrg==
+tap@14.5.0:
+  version "14.5.0"
+  resolved "https://registry.yarnpkg.com/tap/-/tap-14.5.0.tgz#4fdbcf0cb85a9926e0b88c578e390b0e45667865"
+  integrity sha512-C7gfyUH6xrL47pdQFTndwKrSTMYTgNwxfeEDVPY8nIR8/VEGtTQCLHFJHXcbB2wBJ2gtdjrfkLp8Io5yOtwCmQ==
   dependencies:
     async-hook-domain "^1.1.0"
     bind-obj-methods "^2.0.0"
