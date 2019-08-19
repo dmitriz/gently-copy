@@ -228,13 +228,6 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-object-rest-spread@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-object-rest-spread/-/plugin-syntax-object-rest-spread-7.2.0.tgz#3b7a3e733510c57e820b9142a6579ac8b0dfad2e"
-  integrity sha512-t0JKGgqk2We+9may3t0xDdmneaXmyxq0xieYcKHxIsrJO64n1OiMWNUtc5gQK1PA0NpdCRrtZp4z+IUaKugrSA==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-
 "@babel/plugin-syntax-optional-catch-binding@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-optional-catch-binding/-/plugin-syntax-optional-catch-binding-7.2.0.tgz#a94013d6eda8908dfe6a477e7f9eda85656ecf5c"
@@ -593,17 +586,14 @@ auto-bind@^2.0.0:
     "@types/react" "^16.8.12"
 
 "ava@github:sindresorhus/ava":
-  version "2.2.0"
-  uid "7fb0546f462b80e413070c07297f0768b5967eb1"
-  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/7fb0546f462b80e413070c07297f0768b5967eb1"
+  version "2.3.0"
+  uid "49b202fb5c376e71c1400f6c35043280cf417140"
+  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/49b202fb5c376e71c1400f6c35043280cf417140"
   dependencies:
     "@ava/babel-preset-stage-4" "^4.0.0"
     "@ava/babel-preset-transform-test-files" "^6.0.0"
     "@babel/core" "^7.5.5"
     "@babel/generator" "^7.5.5"
-    "@babel/plugin-syntax-async-generators" "^7.2.0"
-    "@babel/plugin-syntax-object-rest-spread" "^7.2.0"
-    "@babel/plugin-syntax-optional-catch-binding" "^7.2.0"
     "@concordance/react" "^2.0.0"
     ansi-escapes "^4.2.1"
     ansi-styles "^4.0.0"
