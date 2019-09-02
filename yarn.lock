@@ -587,8 +587,8 @@ auto-bind@^2.0.0:
 
 "ava@github:sindresorhus/ava":
   version "2.3.0"
-  uid "49b202fb5c376e71c1400f6c35043280cf417140"
-  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/49b202fb5c376e71c1400f6c35043280cf417140"
+  uid "5538bdc6d738a1a42b2c5cb77a7786d86a6901e0"
+  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/5538bdc6d738a1a42b2c5cb77a7786d86a6901e0"
   dependencies:
     "@ava/babel-preset-stage-4" "^4.0.0"
     "@ava/babel-preset-transform-test-files" "^6.0.0"
