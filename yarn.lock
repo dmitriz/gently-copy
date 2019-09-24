@@ -1292,10 +1292,10 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-coveralls@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/coveralls/-/coveralls-3.0.5.tgz#28d7274c6c9827aa85537eab82d66e7e62d0d527"
-  integrity sha512-/KD7PGfZv/tjKB6LoW97jzIgFqem0Tu9tZL9/iwBnBd8zkIZp7vT1ZSHNvnr0GSQMV/LTMxUstWg8WcDDUVQKg==
+coveralls@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/coveralls/-/coveralls-3.0.6.tgz#5c63b2759b6781118e7439bd870ba5e9ee428b25"
+  integrity sha512-Pgh4v3gCI4T/9VijVrm8Ym5v0OgjvGLKj3zTUwkvsCiwqae/p6VLzpsFNjQS2i6ewV7ef+DjFJ5TSKxYt/mCrA==
   dependencies:
     growl "~> 1.10.0"
     js-yaml "^3.13.1"
@@ -1756,17 +1756,17 @@ findit@^2.0.0:
   resolved "https://registry.yarnpkg.com/findit/-/findit-2.0.0.tgz#6509f0126af4c178551cfa99394e032e13a4d56e"
   integrity sha1-ZQnwEmr0wXhVHPqZOU4DLhOk1W4=
 
-flow-parser@^0.101.0:
-  version "0.101.1"
-  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.101.1.tgz#06bf99f73c39cfa6ad0c69f1eb101dc7a4bf4f7d"
-  integrity sha512-5XI7KnnndL1E0bmZp+SURCeNe0mZ86QHtwnmmn91J7Q3VptG26QEpH8pEecN+UgKRFm23K9zzTeesJhmuGA+mg==
+flow-parser@^0.108.0:
+  version "0.108.0"
+  resolved "https://registry.yarnpkg.com/flow-parser/-/flow-parser-0.108.0.tgz#36a8d35e6346b5d18adbafbdc91ad0770d8917d7"
+  integrity sha512-Ug8VuwlyDIZq5Xgrf+T7XLpKydhqYyNd8lmFtf7PZbu90T5LL+FeHjWzxyrBn35RCCZMw7pXrjCrHOSs+2zXyg==
 
-flow-remove-types@^2.101.0:
-  version "2.101.0"
-  resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-2.101.0.tgz#6352e47f8ea6f784cd1bf62f6a3c30045e36f57e"
-  integrity sha512-87C0OgvfgvAWZeA4/0UxmLVbqZUxzntc6knAF2QzwwnUUSQMx7J4UtpCB8COIf9wehkWOEmcIa2XnQdz2lgYyg==
+flow-remove-types@^2.107.0:
+  version "2.108.0"
+  resolved "https://registry.yarnpkg.com/flow-remove-types/-/flow-remove-types-2.108.0.tgz#07a20cf06f373a044bd5d4186da556a4c8ae45d5"
+  integrity sha512-cbYe0AijNVlc6V1Xx99fNqQtRMJ+xbQwG5rQtcheFQiBPO6b6VwvhMs/OelJvpO+YUTz49IhFKzoZGj5xm74PA==
   dependencies:
-    flow-parser "^0.101.0"
+    flow-parser "^0.108.0"
     pirates "^3.0.2"
     vlq "^0.2.1"
 
@@ -2827,10 +2827,10 @@ minimist@~0.0.1:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
   integrity sha1-3j+YVD2/lggr5IrRoMfNqDYwHc8=
 
-minipass@^2.2.0, minipass@^2.3.5:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.3.5.tgz#cacebe492022497f656b0f0f51e2682a9ed2d848"
-  integrity sha512-Gi1W4k059gyRbyVUZQ4mEqLm0YIUiGYfvxhF6SIlk3ui1WVxMTGfGdQ2SInh3PDrRTVvPKgULkpJtT4RH10+VA==
+minipass@^2.2.0, minipass@^2.8.3:
+  version "2.8.4"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.8.4.tgz#490fe62adeb620c4a3373f62ee1c31cf2ef36385"
+  integrity sha512-i97pKD0f0eZLlhcTTSa6b6QlxCD7cvh8t/5MyR/pqchD5GPAeDaUrXQCoYA+W/VmmCgWvS/ADbfW3FUc+iT51Q==
   dependencies:
     safe-buffer "^5.1.2"
     yallist "^3.0.0"
@@ -3372,15 +3372,14 @@ react-reconciler@^0.20.0:
     prop-types "^15.6.2"
     scheduler "^0.13.6"
 
-react@^16.8.6:
-  version "16.8.6"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
-  integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
+react@^16.8.6, react@^16.9.0:
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
+  integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
-    scheduler "^0.13.6"
 
 read-pkg-up@^3.0.0:
   version "3.0.0"
@@ -3629,10 +3628,10 @@ rimraf@3.0.0:
   dependencies:
     glob "^7.1.3"
 
-rimraf@^2.6.2, rimraf@^2.6.3:
-  version "2.6.3"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.3.tgz#b2d104fe0d8fb27cf9e0a1cda8262dd3833c6cab"
-  integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
+rimraf@^2.6.2, rimraf@^2.6.3, rimraf@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
+  integrity sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
   dependencies:
     glob "^7.1.3"
 
@@ -3745,7 +3744,7 @@ source-map-support@^0.4.15:
   dependencies:
     source-map "^0.5.6"
 
-source-map-support@^0.5.11, source-map-support@^0.5.12, source-map-support@^0.5.13, source-map-support@^0.5.6:
+source-map-support@^0.5.11, source-map-support@^0.5.13, source-map-support@^0.5.6:
   version "0.5.13"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.13.tgz#31b24a9c2e73c2de85066c0feb7d44767ed52932"
   integrity sha512-SHSKFHadjVA5oR4PPqhtAVdcBWwRYVd6g6cAXnIbRiIwc2EhPrTuKUBdSLvlEKyIP3GCf89fltvcZiP9MMFA1w==
@@ -3991,10 +3990,10 @@ tap-parser@^8.0.0:
     minipass "^2.2.0"
     tap-yaml "0 || 1"
 
-tap-parser@^9.3.2:
-  version "9.3.2"
-  resolved "https://registry.yarnpkg.com/tap-parser/-/tap-parser-9.3.2.tgz#a4fcd566dfc15584b721e6e16f3152ebe4937cc8"
-  integrity sha512-bQ76sD6ZP9loxdk/KiqXgWDEfjJYiZUj0a7ElnLMSny7Q8G72UMcOQee85j5ddKHA9fzGAoL6cfJbg3rur7S5g==
+tap-parser@^9.3.2, tap-parser@^9.3.3:
+  version "9.3.3"
+  resolved "https://registry.yarnpkg.com/tap-parser/-/tap-parser-9.3.3.tgz#f47a27cf07bafc48c53e33de65a9a97fd76d6cf8"
+  integrity sha512-VlC7tlSZ3EGt2qPLSa9CTJepNkc2yCh7uzhzAF5DxnuujeKbFbKxMA+fxtTWEN2j/KgfGi+mgooiZPKkOhEQyw==
   dependencies:
     events-to-array "^1.0.1"
     minipass "^2.2.0"
@@ -4007,10 +4006,10 @@ tap-parser@^9.3.2:
   dependencies:
     yaml "^1.5.0"
 
-tap@14.6.1:
-  version "14.6.1"
-  resolved "https://registry.yarnpkg.com/tap/-/tap-14.6.1.tgz#ad94a2baa5a61db772fafa2d172ba8df77329a6c"
-  integrity sha512-zxENP78NlaF4guEyNPvSs7iKWOJUSjqRYcfN+ERo42OaSyA0hDm27U4yuliQjuBJlW35vvAk9dIfocPVa0eYMw==
+tap@14.6.5:
+  version "14.6.5"
+  resolved "https://registry.yarnpkg.com/tap/-/tap-14.6.5.tgz#e754f1f67ab0fd16bee4b5575d4cc245652ccfc6"
+  integrity sha512-+cSTJoajn8dyBttdNkHtrWkMAjIHRYrSlFTPkGLeeUhMpQ3kal7YsCnwPSVtE2R0ALddxtTGvU+2D87HZnAUgQ==
   dependencies:
     async-hook-domain "^1.1.0"
     bind-obj-methods "^2.0.0"
@@ -4018,11 +4017,11 @@ tap@14.6.1:
     capture-stack-trace "^1.0.0"
     chokidar "^3.0.2"
     color-support "^1.1.0"
-    coveralls "^3.0.5"
+    coveralls "^3.0.6"
     diff "^4.0.1"
     esm "^3.2.25"
     findit "^2.0.0"
-    flow-remove-types "^2.101.0"
+    flow-remove-types "^2.107.0"
     foreground-child "^1.3.3"
     fs-exists-cached "^1.0.0"
     function-loop "^1.0.2"
@@ -4032,25 +4031,25 @@ tap@14.6.1:
     isexe "^2.0.0"
     istanbul-lib-processinfo "^1.0.0"
     jackspeak "^1.4.0"
-    minipass "^2.3.5"
+    minipass "^2.8.3"
     mkdirp "^0.5.1"
     nyc "^14.1.1"
     opener "^1.5.1"
     own-or "^1.0.0"
     own-or-env "^1.0.1"
-    react "^16.8.6"
-    rimraf "^2.6.3"
+    react "^16.9.0"
+    rimraf "^2.7.1"
     signal-exit "^3.0.0"
-    source-map-support "^0.5.12"
+    source-map-support "^0.5.13"
     stack-utils "^1.0.2"
     tap-mocha-reporter "^4.0.1"
-    tap-parser "^9.3.2"
+    tap-parser "^9.3.3"
     tap-yaml "^1.0.0"
     tcompare "^2.3.0"
     treport "^0.4.0"
     trivial-deferred "^1.0.1"
     ts-node "^8.3.0"
-    typescript "^3.5.3"
+    typescript "^3.6.3"
     which "^1.3.1"
     write-file-atomic "^3.0.0"
     yaml "^1.6.0"
@@ -4197,10 +4196,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^3.5.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
-  integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
+typescript@^3.6.3:
+  version "3.6.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.3.tgz#fea942fabb20f7e1ca7164ff626f1a9f3f70b4da"
+  integrity sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
 
 uglify-js@^3.1.4:
   version "3.5.15"
