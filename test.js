@@ -1,10 +1,10 @@
 // test.js
-import fs from 'fs'
+const fs = require('fs')
 // import path from 'path'
-import rimraf from 'rimraf'
-import test from 'ava'
+const rimraf = require('rimraf')
+const test = require('ava')
 
-import fn from './'
+const fn = require('./')
 
 function read (file) {
   return fs.readFileSync(file, 'utf8')
