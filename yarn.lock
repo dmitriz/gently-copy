@@ -572,9 +572,9 @@ auto-bind@^4.0.0:
   integrity sha512-Hdw8qdNiqdJ8LqT0iK0sVzkFbzg6fhnQqqfWhBDxcHZvU75+B+ayzTy8x+k5Ix0Y92XOhOUlx74ps+bA6BeYMQ==
 
 "ava@github:sindresorhus/ava":
-  version "3.3.0"
-  uid "324e45f2f89e6fa872423c338aba20e202c5b2f5"
-  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/324e45f2f89e6fa872423c338aba20e202c5b2f5"
+  version "3.5.1"
+  uid f07eec80e934f150b6e7902288163ea097be45c3
+  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/f07eec80e934f150b6e7902288163ea097be45c3"
   dependencies:
     "@concordance/react" "^2.0.0"
     ansi-styles "^4.2.1"
@@ -583,6 +583,7 @@ auto-bind@^4.0.0:
     chalk "^3.0.0"
     chokidar "^3.3.1"
     chunkd "^2.0.1"
+    ci-info "^2.0.0"
     ci-parallel-vars "^1.0.0"
     clean-stack "^2.2.0"
     clean-yaml-object "^0.1.0"
@@ -602,7 +603,6 @@ auto-bind@^4.0.0:
     ignore-by-default "^1.0.0"
     import-local "^3.0.2"
     indent-string "^4.0.0"
-    is-ci "^2.0.0"
     is-error "^2.2.2"
     is-plain-object "^3.0.0"
     is-promise "^2.1.0"
