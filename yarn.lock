@@ -572,9 +572,9 @@ auto-bind@^4.0.0:
   integrity sha512-Hdw8qdNiqdJ8LqT0iK0sVzkFbzg6fhnQqqfWhBDxcHZvU75+B+ayzTy8x+k5Ix0Y92XOhOUlx74ps+bA6BeYMQ==
 
 "ava@github:sindresorhus/ava":
-  version "3.5.1"
-  uid f07eec80e934f150b6e7902288163ea097be45c3
-  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/f07eec80e934f150b6e7902288163ea097be45c3"
+  version "3.5.2"
+  uid "4c3e791d853faa396a2135668d6fa10d1f98520d"
+  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/4c3e791d853faa396a2135668d6fa10d1f98520d"
   dependencies:
     "@concordance/react" "^2.0.0"
     ansi-styles "^4.2.1"
