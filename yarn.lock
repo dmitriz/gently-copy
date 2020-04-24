@@ -740,8 +740,8 @@ auto-bind@^4.0.0:
 
 "ava@github:sindresorhus/ava":
   version "3.7.1"
-  uid "3c0fc03cf3374a718dd26cc03fd6468319ac6d03"
-  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/3c0fc03cf3374a718dd26cc03fd6468319ac6d03"
+  uid "9a9351ddbee9c6c76601210c5dd8f5b0d81cc3b0"
+  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/9a9351ddbee9c6c76601210c5dd8f5b0d81cc3b0"
   dependencies:
     "@concordance/react" "^2.0.0"
     ansi-styles "^4.2.1"
@@ -752,7 +752,6 @@ auto-bind@^4.0.0:
     chunkd "^2.0.1"
     ci-info "^2.0.0"
     ci-parallel-vars "^1.0.0"
-    clean-stack "^2.2.0"
     clean-yaml-object "^0.1.0"
     cli-cursor "^3.1.0"
     cli-truncate "^2.1.0"
@@ -998,7 +997,7 @@ ci-parallel-vars@^1.0.0:
   resolved "https://registry.yarnpkg.com/ci-parallel-vars/-/ci-parallel-vars-1.0.0.tgz#af97729ed1c7381911ca37bcea263d62638701b3"
   integrity sha512-u6dx20FBXm+apMi+5x7UVm6EH7BL1gc4XrcnQewjcB7HWRcor/V5qWc3RG2HwpgDJ26gIi2DSEu3B7sXynAw/g==
 
-clean-stack@^2.0.0, clean-stack@^2.2.0:
+clean-stack@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/clean-stack/-/clean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
   integrity sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==
