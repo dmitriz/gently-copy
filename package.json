@@ -36,7 +36,7 @@
     "inform"
   ],
   "dependencies": {
-    "chalk": "3.0.0",
+    "chalk": "4.0.0",
     "shelljs": "0.8.4"
   },
   "devDependencies": {
