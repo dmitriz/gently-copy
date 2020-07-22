@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "ava": "github:sindresorhus/ava",
-    "codecov": "3.7.1",
+    "codecov": "3.7.2",
     "nyc": "15.0.1",
     "rimraf": "3.0.2",
     "tap": "14.10.8"
