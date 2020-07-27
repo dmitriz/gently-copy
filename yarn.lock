@@ -750,8 +750,8 @@ auto-bind@^4.0.0:
 
 "ava@github:sindresorhus/ava":
   version "3.10.1"
-  uid "07602f5bedd4d1363d3998d5e4508d1e094dff4f"
-  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/07602f5bedd4d1363d3998d5e4508d1e094dff4f"
+  uid "142363b7ab982978c3efc2d2d40657fe062e2252"
+  resolved "https://codeload.github.com/sindresorhus/ava/tar.gz/142363b7ab982978c3efc2d2d40657fe062e2252"
   dependencies:
     "@concordance/react" "^2.0.0"
     acorn "^7.3.1"
